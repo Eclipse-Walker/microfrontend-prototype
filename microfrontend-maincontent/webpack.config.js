@@ -1,15 +1,25 @@
-const { shareAll, withModuleFederationPlugin } = require('@angular-architects/module-federation/webpack');
+const {
+  shareAll,
+  withModuleFederationPlugin,
+} = require("@angular-architects/module-federation/webpack");
 
-module.exports = withModuleFederationPlugin({
-
-  name: 'microfrontend-maincontent',
+const moduleFederationConfig = withModuleFederationPlugin({
+  name: "microfrontend-maincontent",
 
   exposes: {
-    './Component': './src/app/app.component.ts',
+    "./Component": "./src/app/app.component.ts",
   },
 
   shared: {
-    ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
+    ...shareAll({
+      singleton: true,
+      strictVersion: true,
+      requiredVersion: "auto",
+    }),
   },
-
 });
+
+moduleFederationConfig.output = moduleFederationConfig.output || {};
+moduleFederationConfig.output.publicPath = "http://localhost:4201/";
+
+module.exports = moduleFederationConfig;
