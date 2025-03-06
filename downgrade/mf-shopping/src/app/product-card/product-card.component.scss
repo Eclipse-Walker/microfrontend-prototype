@@ -1,4 +1,4 @@
-.card {
+/* .card {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -53,3 +53,180 @@
     border-radius: 8px;
   }
 }
+ */
+
+
+// Version 2 | Add Animation
+/*  .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  width: 100%;
+  max-width: 350px;
+  background: #ffffff;
+  border: 1px solid #e7e6eb;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 1.5em;
+  color: #333333;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .card-image {
+    width: 100%;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+  }
+
+  &__price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff6347;
+  }
+
+  .card-description {
+    text-align: center;
+
+    &__title {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 0.5em;
+    }
+    &__description {
+      font-size: 1rem;
+      color: #666666;
+    }
+  }
+
+  .card-actions {
+    display: flex;
+    gap: 1em;
+    width: 100%;
+    
+    button {
+      flex: 1;
+      border: none;
+      padding: 0.8em;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+
+      &__add {
+        background: #fbbf23;
+        &:hover {
+          background: #e6a020;
+        }
+      }
+
+      &__buy {
+        background: #61a5fa;
+        border: 1px solid #61a5fa;
+        color: white;
+        &:hover {
+          background: #4a8cdc;
+        }
+      }
+    }
+  }
+} */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  width: 100%;
+  max-width: 350px;
+  background: #ffffff;
+  border: 1px solid #e7e6eb;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 1.5em;
+  color: #333333;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .card-image {
+    width: 100%;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+  }
+
+  &__price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff6347;
+  }
+
+  .card-description {
+    text-align: center;
+
+    &__title {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 0.5em;
+    }
+    &__description {
+      font-size: 1rem;
+      color: #666666;
+      a {
+        color: #1e90ff;
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-actions {
+    display: flex;
+    gap: 1em;
+    width: 100%;
+    
+    button {
+      flex: 1;
+      border: none;
+      padding: 0.8em;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+
+      &__add {
+        background: #fbbf23;
+        &:hover {
+          background: #e6a020;
+        }
+      }
+
+      &__buy {
+        background: #61a5fa;
+        border: 1px solid #61a5fa;
+        color: white;
+        &:hover {
+          background: #4a8cdc;
+        }
+      }
+    }
+  }
+}
+

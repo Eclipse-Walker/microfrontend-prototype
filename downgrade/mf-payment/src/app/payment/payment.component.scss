@@ -1,4 +1,4 @@
-.container {
+/* .container {
   padding: 1em;
   border: 3px dashed purple;
 }
@@ -102,5 +102,117 @@ table td:nth-child(4) {
 
   table td:not(:last-child) {
     border-bottom: 1px solid var(--insideBorderColor);
+  }
+}
+ */
+
+
+ .container {
+  padding: 1em;
+  border: 3px dashed purple;
+}
+
+ .container {
+  padding: 1.5em;
+  border: 2px solid #292929;
+  border-radius: 10px;
+  background-color: #f3f4f6;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1em;
+  color: #333;
+  font-size: 2em;
+}
+
+table {
+  --accent-color: #292929;
+  --text-color: #333;
+  --bgColorDarker: #f3f4f6;
+  --bgColorLighter: #fff;
+  --insideBorderColor: #ddd;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--insideBorderColor);
+  border-collapse: collapse;
+  color: var(--text-color);
+  table-layout: auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table thead {
+  background-color: var(--accent-color);
+  color: whitesmoke;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+table tbody tr {
+  border: 1px solid var(--insideBorderColor);
+  transition: background-color 0.3s ease;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: var(--bgColorLighter);
+}
+
+table tbody tr:hover {
+  background-color: var(--bgColorDarker);
+}
+
+table th,
+table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+table td:before {
+  content: attr(data-label);
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-right: 0.5em;
+}
+
+@media screen and (max-width: 768px) {
+  table {
+    border: none;
+  }
+
+  table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  table tbody tr {
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  table td {
+    font-size: 0.9rem;
+    text-align: right;
+    display: block;
+    border-bottom: 1px solid var(--insideBorderColor);
+    padding: 0.75rem;
+    word-wrap: break-word;
+  }
+
+  table td:before {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    float: left;
+    opacity: 0.6;
+  }
+
+  table td:last-child {
+    border-bottom: none;
   }
 }
