@@ -7,7 +7,8 @@ const moduleFederationConfig = withModuleFederationPlugin({
   name: "microfrontend-maincontent",
 
   exposes: {
-    "./Component": "./src/app/app.component.ts",
+    // "./Component": "./src/app/app.component.ts",
+    "./WelcomeModule": "./src/app/welcome/welcome.module.ts",
   },
 
   shared: {
@@ -19,7 +20,7 @@ const moduleFederationConfig = withModuleFederationPlugin({
   },
 });
 
-moduleFederationConfig.output = moduleFederationConfig.output || {};
+// moduleFederationConfig.output = moduleFederationConfig.output || {};
 moduleFederationConfig.output.publicPath = "http://localhost:4201/";
 
 module.exports = moduleFederationConfig;

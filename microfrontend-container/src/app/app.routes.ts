@@ -9,8 +9,8 @@ export const routes: Routes = [
       loadRemoteModule({
         type: 'module',
         remoteEntry: 'http://localhost:4201/remoteEntry.js',
-        exposedModule: './Component',
-      }).then((m) => m.Component),
+        exposedModule: './WelcomeComponent',
+      }).then((m) => m.WelcomeModule),
   },
 ];
 
